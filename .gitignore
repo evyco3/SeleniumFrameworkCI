@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Except the src folder and all its contents
+!src/
+!src/**
+
+# Except the testng.xml file
+!testng.xml
+
+# Except the pom.xml file
+!pom.xml
+
+# Except the .gitignore file itself
+!.gitignore

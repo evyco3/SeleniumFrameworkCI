@@ -44,7 +44,7 @@ public final class Driver {
      * @param browserType The type of browser to initialize.
      * @throws RuntimeException If WebDriver initialization fails.
      */
-    private void initDriver(BrowserType browserType) {
+    public void initDriver(BrowserType browserType) {
         try {
             WebDriver driver = DriverFactory.getDriver(browserType);
             if (driver != null) {
@@ -67,7 +67,7 @@ public final class Driver {
      *
      * @throws RuntimeException If WebDriver quitting fails.
      */
-    private void quitDriver() {
+    public void quitDriver() {
         try {
             WebDriver driver = driverThreads.get();
             if (driver != null) {
@@ -89,7 +89,7 @@ public final class Driver {
      *
      * @param driver The WebDriver instance to configure.
      */
-    private void configuration(WebDriver driver) {
+    public void configuration(WebDriver driver) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ConfigManager.get().implicitTime()));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(ConfigManager.get().pageLoadTime()));
         driver.manage().window().maximize();
@@ -101,7 +101,7 @@ public final class Driver {
      *
      * @return The WebDriver instance.
      */
-    private WebDriver getDriver() {
+    public WebDriver getDriver() {
         return driverThreads.get();
     }
 }

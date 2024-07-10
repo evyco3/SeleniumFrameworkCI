@@ -14,6 +14,12 @@
             <artifactId>log4j-core</artifactId>
             <version>3.0.0-beta2</version>
         </dependency>
+        <!--owner -->
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>1.0.12</version>
+        </dependency>
 
     </dependencies>
     <properties>
